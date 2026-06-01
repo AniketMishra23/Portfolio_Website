@@ -20,8 +20,8 @@ export const projects = [
   {
     title: "AcadBot",
     description:
-      "A Telegram bot that assists students with academic needs — natural language Q&A, resource discovery, and PDF question-answering by uploading documents. Deployed live at t.me/Acad23Bot.",
-    tags: ["Python", "Telegram Bot API", "OpenAI API", "ChatPDF API", "HTML", "CSS"],
+      "A Telegram bot that assists students with academic needs — natural language Q&A, resource discovery, and PDF question-answering via a RAG pipeline. Uses semantic embeddings and vector search for retrieval.",
+    tags: ["Python", "Telegram Bot API", "Groq API", "Gemini", "RAG", "FAISS", "Qdrant", "PostgreSQL"],
     github: "https://github.com/AniketMishra23/AcadBot",
     live: "https://t.me/Acad23Bot",
     color: "#00f5ff",
@@ -30,7 +30,7 @@ export const projects = [
     title: "AusFlash",
     description:
       "End-to-end automated news intelligence pipeline for Australia (inspired by InShorts). Scrapes 20+ global sources, deduplicates via TF-IDF, classifies into 9 sections, and summarises to 60 words every 30 minutes.",
-    tags: ["Python", "Apify", "BART", "HuggingFace", "scikit-learn", "Pandas", "GitHub Actions"],
+    tags: ["Python", "TypeScript", "FastAPI", "React Native", "Expo", "HuggingFace", "scikit-learn", "Apify", "Supabase", "GitHub Actions"],
     github: "https://github.com/AniketMishra23/ausflash",
     color: "#bf00ff",
   },
@@ -44,8 +44,8 @@ export const projects = [
   {
     title: "YouTube Q&A Bot",
     description:
-      "Chat application that lets users ask natural language questions about any YouTube video's content. Flask backend integrates OpenAI NLP models with a React frontend.",
-    tags: ["JavaScript", "Python", "Flask", "OpenAI API", "React", "HTML", "CSS"],
+      "Chrome extension and chat app that lets users ask natural language questions about any YouTube video's content. Python backend with a JavaScript frontend.",
+    tags: ["JavaScript", "Python", "HTML", "CSS"],
     github: "https://github.com/AniketMishra23/youtubeQnA",
     color: "#ff6b35",
   },
