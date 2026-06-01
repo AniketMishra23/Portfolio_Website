@@ -25,19 +25,19 @@ export default function Navbar() {
         scrolled ? "bg-[#0a0a0fee] backdrop-blur-md border-b border-[#00f5ff22]" : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <span className="font-bold text-lg neon-text tracking-widest font-mono">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <span className="font-bold text-lg neon-text tracking-widest font-mono shrink-0">
           {personal.name.split(" ")[0]}
           <span className="text-white">.dev</span>
         </span>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex gap-8">
+        {/* Desktop links — hidden below lg */}
+        <ul className="hidden lg:flex gap-5 xl:gap-8">
           {links.map((l) => (
             <li key={l}>
               <button
                 onClick={() => scrollTo(l)}
-                className="text-slate-400 hover:text-[#00f5ff] transition-colors text-sm tracking-wide uppercase font-mono"
+                className="text-slate-400 hover:text-[#00f5ff] transition-colors text-xs xl:text-sm tracking-wide uppercase font-mono"
               >
                 {l}
               </button>
@@ -45,10 +45,11 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
+        {/* Mobile/tablet toggle */}
         <button
-          className="md:hidden text-slate-400 hover:text-[#00f5ff]"
+          className="lg:hidden text-slate-400 hover:text-[#00f5ff] p-1"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -56,7 +57,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#0f0f1a] border-t border-[#00f5ff22] px-6 pb-4">
+        <div className="lg:hidden bg-[#0f0f1a] border-t border-[#00f5ff22] px-4 pb-4">
           {links.map((l) => (
             <button
               key={l}

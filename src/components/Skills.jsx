@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Award } from "lucide-react";
 import { skills, certifications } from "../data";
@@ -44,11 +43,11 @@ const techCloud = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6">
+    <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <SectionHeader label="03" title="Skills" />
 
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 mt-12">
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5 mt-10 sm:mt-12">
           {skills.map((s, i) => (
             <SkillBar key={s.name} skill={s} index={i} />
           ))}
@@ -60,14 +59,14 @@ export default function Skills() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mt-12 p-6 card-bg rounded-xl border border-[#00f5ff11]"
+          className="mt-10 sm:mt-12 p-5 sm:p-6 card-bg rounded-xl border border-[#00f5ff11]"
         >
           <p className="text-slate-500 text-xs font-mono uppercase tracking-widest mb-4">Full tech stack</p>
           <div className="flex flex-wrap gap-2">
             {techCloud.map((t) => (
               <span
                 key={t}
-                className="px-3 py-1.5 text-xs font-mono bg-[#1a1a2e] border border-[#00f5ff22] text-slate-400 rounded-md hover:border-[#00f5ff66] hover:text-[#00f5ff] transition-colors cursor-default"
+                className="px-2.5 py-1 text-xs font-mono bg-[#1a1a2e] border border-[#00f5ff22] text-slate-400 rounded-md hover:border-[#00f5ff66] hover:text-[#00f5ff] transition-colors cursor-default"
               >
                 {t}
               </span>
@@ -81,7 +80,7 @@ export default function Skills() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-8 p-6 card-bg rounded-xl border border-[#bf00ff22]"
+          className="mt-4 p-5 sm:p-6 card-bg rounded-xl border border-[#bf00ff22]"
         >
           <div className="flex items-center gap-2 mb-4">
             <Award size={15} className="text-[#bf00ff]" />
@@ -89,12 +88,9 @@ export default function Skills() {
           </div>
           <div className="grid sm:grid-cols-2 gap-2">
             {certifications.map((c) => (
-              <div
-                key={c}
-                className="flex items-center gap-2 text-sm text-slate-300"
-              >
-                <span className="text-[#bf00ff] text-xs">▸</span>
-                {c}
+              <div key={c} className="flex items-start gap-2 text-sm text-slate-300">
+                <span className="text-[#bf00ff] text-xs mt-0.5 shrink-0">▸</span>
+                <span className="text-xs sm:text-sm">{c}</span>
               </div>
             ))}
           </div>

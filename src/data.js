@@ -22,6 +22,7 @@ export const projects = [
     description:
       "A Telegram bot that assists students with academic needs — natural language Q&A, resource discovery, and PDF question-answering by uploading documents. Deployed live at t.me/Acad23Bot.",
     tags: ["Python", "Telegram Bot API", "OpenAI API", "ChatPDF API", "HTML", "CSS"],
+    github: "https://github.com/AniketMishra23/AcadBot",
     live: "https://t.me/Acad23Bot",
     color: "#00f5ff",
   },
@@ -30,6 +31,7 @@ export const projects = [
     description:
       "End-to-end automated news intelligence pipeline for Australia (inspired by InShorts). Scrapes 20+ global sources, deduplicates via TF-IDF, classifies into 9 sections, and summarises to 60 words every 30 minutes.",
     tags: ["Python", "Apify", "BART", "HuggingFace", "scikit-learn", "Pandas", "GitHub Actions"],
+    github: "https://github.com/AniketMishra23/ausflash",
     color: "#bf00ff",
   },
   {
@@ -44,6 +46,7 @@ export const projects = [
     description:
       "Chat application that lets users ask natural language questions about any YouTube video's content. Flask backend integrates OpenAI NLP models with a React frontend.",
     tags: ["JavaScript", "Python", "Flask", "OpenAI API", "React", "HTML", "CSS"],
+    github: "https://github.com/AniketMishra23/youtubeQnA",
     color: "#ff6b35",
   },
   {
@@ -51,6 +54,7 @@ export const projects = [
     description:
       "Electronic Health Records system addressing the digitisation and management of patient medical records — history, medications, test results, and diagnoses — to reduce administrative burden.",
     tags: ["Python"],
+    github: "https://github.com/AniketMishra23/Electronic_Health_Records",
     color: "#00f5ff",
   },
   {
@@ -58,6 +62,7 @@ export const projects = [
     description:
       "Carpooling hackathon project implementing route-matching and pooling logic. Includes a routing algorithm, data-driven matching from CSV datasets, and route difference analysis.",
     tags: ["Python", "Jupyter Notebook", "JavaScript"],
+    github: "https://github.com/AniketMishra23/CarPool",
     color: "#bf00ff",
   },
 ];

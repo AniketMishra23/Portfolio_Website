@@ -6,11 +6,11 @@ import { SectionHeader } from "./About";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 bg-[#0d0d18]">
+    <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0d0d18]">
       <div className="max-w-6xl mx-auto">
         <SectionHeader label="02" title="Projects" />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-10 sm:mt-12">
           {projects.map((p, i) => (
             <ProjectCard key={p.title} project={p} index={i} />
           ))}
@@ -27,25 +27,29 @@ function ProjectCard({ project, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.08, duration: 0.5 }}
-      whileHover={{ y: -6 }}
-      className="card-bg rounded-xl p-6 neon-border border transition-all duration-300 group flex flex-col"
+      whileHover={{ y: -4 }}
+      className="card-bg rounded-xl p-5 neon-border border transition-all duration-300 group flex flex-col"
     >
-      {/* Color accent line */}
+      {/* Accent line */}
       <div
-        className="h-0.5 w-12 rounded-full mb-5 transition-all duration-300 group-hover:w-full"
+        className="h-0.5 w-12 rounded-full mb-4 transition-all duration-300 group-hover:w-full"
         style={{ backgroundColor: project.color }}
       />
 
-      <h3 className="text-white font-semibold text-lg mb-2">{project.title}</h3>
+      <h3 className="text-white font-semibold text-base mb-2">{project.title}</h3>
       <p className="text-slate-400 text-sm leading-relaxed mb-4 flex-1">{project.description}</p>
 
       {/* Tags */}
-      <div className="flex flex-wrap gap-2 mb-5">
+      <div className="flex flex-wrap gap-1.5 mb-4">
         {project.tags.map((t) => (
           <span
             key={t}
             className="px-2 py-0.5 text-xs font-mono rounded border"
-            style={{ color: project.color, borderColor: project.color + "44", backgroundColor: project.color + "11" }}
+            style={{
+              color: project.color,
+              borderColor: project.color + "44",
+              backgroundColor: project.color + "11",
+            }}
           >
             {t}
           </span>
@@ -53,7 +57,7 @@ function ProjectCard({ project, index }) {
       </div>
 
       {/* Links */}
-      <div className="flex gap-3">
+      <div className="flex gap-4 mt-auto">
         {project.github && (
           <a
             href={project.github}
