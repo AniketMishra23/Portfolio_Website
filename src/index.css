@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0a0f;
+    color: #e2e8f0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  #root {
+    width: 100%;
+    text-align: left;
+  }
+
+  ::selection {
+    background: #00f5ff44;
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #0a0a0f; }
+  ::-webkit-scrollbar-thumb { background: #00f5ff55; border-radius: 3px; }
+}
+
+@layer utilities {
+  .neon-text {
+    color: #00f5ff;
+    text-shadow: 0 0 10px #00f5ff88, 0 0 30px #00f5ff44;
+  }
+  .neon-text-purple {
+    color: #bf00ff;
+    text-shadow: 0 0 10px #bf00ff88, 0 0 30px #bf00ff44;
+  }
+  .neon-border {
+    border-color: #00f5ff33;
+    box-shadow: 0 0 15px #00f5ff11, inset 0 0 15px #00f5ff05;
+  }
+  .neon-border:hover {
+    border-color: #00f5ff88;
+    box-shadow: 0 0 25px #00f5ff33, inset 0 0 20px #00f5ff0a;
+  }
+  .card-bg {
+    background: #0f0f1a;
+    border: 1px solid #00f5ff22;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0,245,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,245,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
